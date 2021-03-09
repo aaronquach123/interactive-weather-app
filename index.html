@@ -5,39 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <!--link to bootstrap and bootstrap icons-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
+<!--Begin Body-->
 <body>
-    <header>
-        <h1>Weather Dashboard</h1>
+    
+    <!--Begin header-->
+    <header class="bg-secondary text-center text-light">
+        <h1 class="fs-1">Weather Dashboard</h1>
     </header>
-    <main id="container">
-        <div id="city-form">
-            <div id="city-search">
-                <h2>Search for a city:</h2>
+    <!--End header-->
+
+    <!--Begin main-->
+    <main class="d-flex">
+
+        <!--Begin div section form search and history-->
+        <div id="city-form" class="col-2 me-6">
+            
+            <!--Begin div section for city search-->
+            <div id="city-search" class="mb-4">
+                <h2 id="search-heading">Search for a city:</h2>
                 <form>
-                    <input type="text" id="city-input" name="city-input">
-                    <input type="submit" id="city-submit" name="city-submit">
+                    <input type="text" id="city-input" name="city-input" class="btn btn-light border">
+                    <button type="button" id="city-submit" class="btn btn-primary border m"><i class="bi bi-search bg-primary"></i></button>
                 </form>
             </div>
+            <!--End div section for city search-->
 
+            <!--Begin div section for city history-->
             <div id="city-history">
 
             </div>
+            <!--End div section for city history-->
         </div>
-        
-        <div id="weather-display">
-            <div id="city-current-info">
+        <!--End div section form search and history-->
+
+        <!--Begin div section for weather display-->
+        <div id="weather-display" class="col-10">
+            
+            <!--Begin div section for current weather display-->
+            <div id="city-current-info" class="mb-4">
 
             </div>
-            <div id="city-five-day">
+            <!--End div section for current weather display-->
+
+            <!--Begin div section for five day weather forecast display-->
+            <div id="city-five-day" class="d-flex justify-content-around">
 
             </div>
+            <!--End div section for five day weather forecast display-->
         </div>
+        <!--End div section for weather display-->
     </main>
+    <!--End main-->
+
+    <!--jQuery and momentJs scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+<!--End Body-->
 </html>
